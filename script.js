@@ -1,10 +1,15 @@
-function add = a, b => { a + b }
-
-function multiply = a, b => { a - b }
+function add(a, b) {
+	return a + b;
+  }
+  
+  function multiply(a, b) {
+	return a * b;
+  }
 
 function internal() {
-	const added = this.add(this.a, this.b)
-	this.multiply(this.a, this.b)
+	const added = this.add(this.internal.a, this.internal.b);
+	const multiplied = this.multiply(added, this.internal.c);
+	console.log(multiplied)
 	return this
 }
 
